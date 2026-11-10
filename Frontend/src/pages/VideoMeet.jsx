@@ -65,7 +65,7 @@ export default function VideoMeetComponent() {
     // }
 
     useEffect(() => {
-        console.log("HELLO")
+        
         getPermissions();
 
     })
@@ -207,7 +207,7 @@ export default function VideoMeetComponent() {
 
 
     let getDislayMediaSuccess = (stream) => {
-        console.log("HERE")
+       
         try {
             window.localStream.getTracks().forEach(track => track.stop())
         } catch (e) { console.log(e) }

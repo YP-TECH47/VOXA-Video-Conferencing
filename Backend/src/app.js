@@ -36,14 +36,12 @@ const start = async () => {
   const connectionDb2 = await mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
-      console.log(`Database connected: ${connectionDb2.connection.host}`);
+      console.log(`Database connected`);
     })
     .catch((err) => {
       console.log(`Database connection error: ${err}`);
     });
 
-  // console.log(`Database connected: ${connectionDb.connection.host}`);
-  // console.log(`Database connected: ${connectionDb1.connection.host}`);
 
   server.listen(app.get("port"), () => {
     console.log("LISTENIN ON PORT 8000");
